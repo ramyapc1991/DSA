@@ -28,6 +28,7 @@ class ModularMultiplicativeInverse {
             System.out.println(obj.modInverse(a,m));
 
 
+
         }
 
     }
