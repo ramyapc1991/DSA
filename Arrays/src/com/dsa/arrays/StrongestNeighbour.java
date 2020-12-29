@@ -22,8 +22,8 @@ public class StrongestNeighbour{
          * ***********************************/
         int[] prefix = new int[sizeOfArray-1];
         prefix[0] = Math.max(arr[0], arr[1]);
-        for(int i =1 ;i<sizeOfArray;i++){
-            prefix[i]= Math.max(arr[i],arr[i-1]);
+        for(int i =1 ;i<sizeOfArray-1;i++){
+            prefix[i]= Math.max(arr[i],arr[i+1]);
         }
         for (int i = 0;i<prefix.length;i++)
             System.out.println(prefix[i]);
