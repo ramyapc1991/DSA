@@ -49,24 +49,18 @@ class Frequency{
 //        for (int i=0; i < n; i++){
 //            arr[arr[i]%n] = arr[arr[i]%n]+n;
 //        }
-        int [] fr = new int [arr.length];
-        int visited = -1;
-        for(int i=0;i<n;i++){
-            int count = 1;
-            for(int j=i+1;j<n;j++) {
 
-                if (arr[i] == arr[j]) {
-                    count++;
-                    //To avoid counting same element again
-                    fr[j] = visited;
+        for (int j =0; j<n; j++)
+            arr[j] = arr[j]-1;
 
+        // storing the frequency of elements using mathematical formula
+        for (int i=0; i<n; i++)
+            arr[arr[i]%n] = arr[arr[i]%n] + n;
 
-                }
-            }
-            if(fr[i] != visited)
-                fr[i] = count;
-        }
-        arr =fr;
+        //taking out frequency of each element
+        for (int i =0; i<n; i++)
+            arr[i] = (arr[i]/n);
+
     }
 }
 
