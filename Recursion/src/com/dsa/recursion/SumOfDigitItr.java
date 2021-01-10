@@ -8,7 +8,7 @@ public class SumOfDigitItr {
 
     private static int getSum(int n) {
         int res=0;
-        while(n>0){
+        while(n>0){ 
             res = res + n % 10;
             n = n / 10;
         }
